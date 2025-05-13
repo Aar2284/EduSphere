@@ -1,6 +1,6 @@
-# student-hub
+# EduSphere
 
-Welcome to **student-hub**, an all-in-one educational website designed to help students learn through interactive content and multimedia.
+Welcome to **EduSphere**, an all-in-one educational website designed to help students learn through interactive content and multimedia.
 
 ## 🎯 Features
 
@@ -18,7 +18,7 @@ Welcome to **student-hub**, an all-in-one educational website designed to help s
 
 ## 📂 Folder Structure
 
-student-hub/
+EduSphere/
 ├─ Resources/
 ├─ acad Resources/
 ├─ images/
@@ -35,8 +35,8 @@ student-hub/
 
 1. **Clone the repo**
    ```bash
-   git clone https://github.com/Aar2284/student-hub.git
-   cd student-hub
+   git clone https://github.com/Aar2284/EduSphere.git
+   cd EduSphere
 **Open index.html in your browser** , or
 Run a simple HTTP server:
   python -m http.server 8000
