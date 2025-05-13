@@ -21,7 +21,8 @@ const generateResponse = async (chatElement) => {
     const au = "https://api.openai.com/v1/chat/completions";
     const messageElement = chatElement.querySelector("p");
 
-    try {
+    try 
+    {
         const requestOptions = {
             method: "POST",
             headers: {
@@ -36,22 +37,29 @@ const generateResponse = async (chatElement) => {
 
         const response = await fetch(au, requestOptions);
 
-        if (response.status === 429) {
+        if (response.status === 429) 
+        {
             throw new Error("Too many requests. Please try again later.");
         }
 
         const data = await response.json();
 
-        if (data.choices && data.choices.length > 0) {
+        if (data.choices && data.choices.length > 0) 
+        {
             messageElement.textContent = data.choices[0].message.content.trim();
-        } else {
+        }
+        
+        else 
+        {
             throw new Error("Invalid response format from API");
         }
-    } catch (error) {
+    } catch (error) 
+    {
         console.error("Error fetching response:", error);
         messageElement.classList.add("error");
         messageElement.textContent = error.message;
-    } finally {
+    } finally
+    {
         chatbox.scrollTo(0, chatbox.scrollHeight);
     }
 }
